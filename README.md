@@ -1,2 +1,7 @@
 # api-design-Yufeng-L
-api-design-Yufeng-L created by GitHub Classroom
+
+
+This module can check weather when given airport code such as "KBOS" <br/>
+Airports codes all referenced to file named __"airport-codes.csv"__ <br/>
+
+
