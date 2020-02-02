@@ -18,7 +18,7 @@ def getLoc(airportcode):
 				return "Airportcode Not Found"
 
 #Get weather condition of requested coordinates
-def getTemp(lat,long):
+def getTemp(latitude,longitude):
 
 	dataUrl = 'https://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&appid=49b0f5c0d1b764e0ceea806be36ffa46'.format(latitude, longitude)
 	response = requests.get(dataUrl)
