@@ -65,6 +65,10 @@ Here is the sample json data collected: <br/>
 
 ```
 
+## Result
+Here is the sample output:
+![output](https://github.com/BUEC500C1/api-design-Yufeng-L/blob/master/result.png)
+
 ## API
 
 API call referene: https://openweathermap.org/current 
