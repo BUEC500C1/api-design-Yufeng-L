@@ -31,6 +31,7 @@ def getTemp(latitude,longitude):
 		print(" ")
 
 	data = response.json()
+	# jprint(data)
 	temp = data["main"]["temp"] - 273.15
 	min_temp = data["main"]["temp_min"] - 273.15 
 	max_temp = data["main"]["temp_max"] - 273.15
@@ -45,10 +46,16 @@ def getTemp(latitude,longitude):
 	print("Humidity is {}%".format(humidity))
 	print("Pressure is {}hpa".format(pressure))
 
+#show json collected JSON data
+def jprint(obj):
+	data = json.dumps(obj, sort_keys = True, indent = 4)
+	print(data)
+
 
 if __name__ == "__main__":
 	# latitude = getLoc("KBOS")[0]
 	# longitude = getLoc("KBOS")[1]
+	# getTemp(latitude,longitude)
 	# print(getLoc("abcd"))
 	# print(latitude,longitude)
     # print(type(getLoc("KBOS")))
