@@ -9,8 +9,8 @@ Testd in python __3.8.0__
 
 This module can check weather when given airport code such as "KBOS" <br/>
 Airports codes all referenced to file named __"airport-codes.csv"__ <br/>
-Given Airport code -> Collect Coordinates -> Provide weather feedbacks
-The following attributes are going to be collected: 
+Given Airport code -> Collect Coordinates -> Provide weather feedbacks <br/>
+The following attributes are going to be collected: <br/>
 |Attributes         | Units |
 |-------------------|:-----:|
 |Temperature        |°C     |
