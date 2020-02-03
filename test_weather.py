@@ -6,6 +6,7 @@ import pytest
 
 def test():
 	assert(weathersearch.getLoc("abcd")) == "Airportcode Not Found", "wrong output"
+	assert isinstance(weathersearch.getLoc("KBOS"),list)
 
 # if __name__ == "__main__":
 # 	test()
