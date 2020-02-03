@@ -14,8 +14,9 @@ def getLoc(airportcode):
 			if row[0] == airportcode:
 				coordinates = row[11].split(',')
 				return [coordinates[0].strip(),coordinates[1].strip()]
-			else:
-				return "Airportcode Not Found"
+				break
+		
+		return "Airportcode Not Found"
 
 #Get weather condition of requested coordinates
 def getTemp(latitude,longitude):
@@ -30,9 +31,9 @@ def getTemp(latitude,longitude):
 		print(" ")
 
 	data = response.json()
-	temp = data["main"]["temp"]
-	min_temp = data["main"]["temp_min"]
-	max_temp = data["main"]["temp_max"]
+	temp = data["main"]["temp"] - 273.15
+	min_temp = data["main"]["temp_min"] - 273.15 
+	max_temp = data["main"]["temp_max"] - 273.15
 	pressure = data["main"]["pressure"]
 	humidity = data["main"]["humidity"]
 	description = data["weather"][0]["description"]
@@ -40,16 +41,17 @@ def getTemp(latitude,longitude):
 	print("Here is the weather condition of your requested airport")
 	print("--------------------------------------------------------")
 	print("Brief Description of weather:",description)
-	print("Range of Temp is from {} to {}".format(min_temp,max_temp))
-	print("Humidity is:",humidity)
-	print("Pressure is:",pressure)
+	print("Range of Temp is from {:.1f}°C to {:.1f}°C".format(min_temp,max_temp))
+	print("Humidity is {}%".format(humidity))
+	print("Pressure is {}hpa".format(pressure))
 
 
 if __name__ == "__main__":
 	# latitude = getLoc("KBOS")[0]
 	# longitude = getLoc("KBOS")[1]
+	# print(getLoc("abcd"))
+	# print(latitude,longitude)
     # print(type(getLoc("KBOS")))
-	# getTemp(latitude,longitude)
     pass
 
 
