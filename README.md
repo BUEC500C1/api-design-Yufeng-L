@@ -12,10 +12,10 @@ Airports codes all referenced to file named __"airport-codes.csv"__ <br/>
 Given Airport code -> Collect Coordinates -> Provide weather feedbacks
 The following attributes are going to be collected: 
 |Attributes         | Units |
-|-------------------|:------------------:|
-|Temperature        |°C            |
-|Pressure               |hPa            |
-|Humidity               | %            |
+|-------------------|:-----:|
+|Temperature        |°C     |
+|Pressure           |hPa    |
+|Humidity           | %     |
 
 Here is the sample json data collected:
 ```json
